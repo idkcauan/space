@@ -1,0 +1,21 @@
+package br.com.joaocarloslima;
+
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+public class Tiro extends Asset {
+
+    private int poder;
+
+    public Tiro(int x, int y, int velocidade, Direcao direcao, int poder) {
+        super(x, y, velocidade, direcao);
+        this.poder = poder;
+
+        String path = "images/laser/laser" + poder + ".png";
+        imagem = new ImageView(new Image(getClass().getResource(path).toString()));
+    }
+
+    public int getPoder() {
+        return poder;
+    }
+}
